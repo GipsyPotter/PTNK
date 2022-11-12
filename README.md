@@ -6,7 +6,6 @@ C++ editor and compiler. Suggest using Visual Studio Code and MinGW or [Clion](h
 ### Setup
 1. Click the green "Code" button
 2. Click "Download ZIP"
-
 ![img_1.png](img_1.png)
 3. Extract the ZIP file
 4. Open the folder in your editor of choice
