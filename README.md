@@ -5,6 +5,7 @@ This is a directory of all the IT related things that we do at TN3.
 ## Resources
 
 Documents and class work [nangkhieutin](http://nangkhieutin.com/)
+
 Submit code [tinptnk](http://www.tinptnk.com/login.php)
 
 ## Installation
