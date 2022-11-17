@@ -7,10 +7,10 @@ int main(){
     cin>>n;
     if(n==1){
         cout<<1;
-        return;
+        return 0;
     }else if(n==2){
         cout<<2;
-        return;
+        return 0;
     }else{
         int f1=1, f2=2, f3=0, i=3;
         while(i<=n){
@@ -21,4 +21,5 @@ int main(){
         }
         cout<<f3;
     }
+    return 0;
 }
