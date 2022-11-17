@@ -1,22 +1,18 @@
 #include <iostream>
-#include <vector>
-
+#include <string>
+#include <iomanip>
 using namespace std;
+
 int main(){
-    int num, digit;
-    cin >> num;
-    vector<int> a;
-    while (num != 0){
-        digit = num % 10;
-        a.push_back(digit);
-        num = num / 10;
-    }
-    vector <int> b;
-    b.push_back(1);
-    for (int i = 0; i < a.size(); i++)
-        if (a[i] != 0) {
-
+    string str;
+    cin>>str;
+    int c=0, maxx=0;
+    for(int i=0;i<str.length();i++){
+        if(str[i]!='0') c++;
+        else{
+            if(maxx<c) maxx=c;
+            c=0;
         }
-
-
+    }
+    cout<<maxx;
 }
