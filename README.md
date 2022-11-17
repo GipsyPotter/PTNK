@@ -12,7 +12,7 @@ Submit code [tinptnk](http://www.tinptnk.com/login.php)
 
 ### Requirements
 
-C++ editor and compiler. Suggest using Visual Studio Code and MinGW or [Clion](https://www.jetbrains.com/clion/)
+C++ editor and compiler. Suggest using [Visual Studio Code](https://code.visualstudio.com/) and [MinGW](https://code.visualstudio.com/docs/cpp/config-mingw) or [Clion](https://www.jetbrains.com/clion/)
 
 ### Setup
 
