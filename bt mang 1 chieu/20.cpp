@@ -6,11 +6,10 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-    int prev=0;
-    for(int i=0;i<n;i++){
-        int a;
-        cin>>a;
-        if(prev<a){
+    int arr[n];
+    for(int i=0;i<n;i++) cin>>arr[i];
+    for(int i=0;i<n-1;i++){
+        if(arr[i]<arr[i+1]){
             cout<<"NO";
             return 0;
         }
