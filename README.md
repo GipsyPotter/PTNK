@@ -2,6 +2,8 @@
 
 This is a directory of all the IT related things that we do at TN3.
 
+Update 19/11/22: We've mostly completed both arrays and loop exercises. But lookout for mistakes , if you find any, please let us know!!
+
 ## Resources
 
 Documents and class work [nangkhieutin](http://nangkhieutin.com/)
