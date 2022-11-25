@@ -7,10 +7,13 @@ using namespace std;
 int main(){
     int n, x = 0;
     cin>>n;
-    double sum = 0;
-    for(int i = 0; sum < n; i++){
-        sum += sqrt(i);
-        x ++;
+    double s=1;
+    for(int i=2;i<=n;i++)
+    {
+        s+=sqrt(i);
+        if(s>=n){
+            cout<<i;
+            return 0;
+        }
     }
-    cout<<fixed<<setprecision(2)<<x;
 }
