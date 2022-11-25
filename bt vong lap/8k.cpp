@@ -1,17 +1,16 @@
 #include <iostream>
+#include <string>
 using namespace std;
 int main()
 {
-    int n, num, digit, rev = 0;
-    cin >> num;
-    n = num;
-    while (num != 0) {
-        digit = num % 10;
-        rev = (rev * 10) + digit;
-        num = num / 10;
+    string str;
+    cin>>str;
+    int len=str.length();
+    for(int i=0;i<len/2;i++){
+        if(str[i]!=str[len-i-1]){
+            cout<<"NO";
+            return 0;
+        }
     }
-    if (n == rev)
-        cout << "YES";
-    else
-        cout << "NO";
+    cout<<"YES";
 }
