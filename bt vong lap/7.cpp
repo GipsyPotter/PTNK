@@ -6,7 +6,7 @@ int f(int n)
 {
     if(n==1) return 1;
     int s=0;
-    for(int i=n-1;i>=1;i--) s+=f(i);
+    for(int i=1;i<n;i++) s+=f(i);
     return n*s;
 }
 int main()
