@@ -2,7 +2,7 @@
 
 This is a directory of all the IT related things that we do at TN3.
 
-Update 19/11/22: We've mostly completed both arrays and loop exercises. But lookout for mistakes , if you find any, please let us know!!
+Update 25/11/22: Working on problem on 6 and 7. But lookout for mistakes , if you find any, please let us know!!
 
 ## Resources
 
