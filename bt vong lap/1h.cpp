@@ -2,18 +2,17 @@
 #include <iomanip>
 #include <cmath>
 using namespace std;
-double Solve(int n){
-    double s=1, a=0, b=0;
-    int i =2, m = 2;
-    while(i<=n){
-        if (i%2==0) s = s*(1+1.0/sqrt(i));
-        else s = s*(1-1.0/sqrt(i));
-        i++;
-    }
-    return s;
-}
-int main(){
+
+int main()
+{
     int n;
     cin>>n;
-    cout<<setprecision(2)<<fixed<<Solve(n);
+    double s=1;
+    for(int i=2; i<=n; i++)
+    {
+        if(i%2==0) s*=1+(1.0/sqrt(i));
+        else s*=1-(1.0/sqrt(i));
+    }
+    cout<<setprecision(2)<<fixed<<s;
+    return 0;
 }
