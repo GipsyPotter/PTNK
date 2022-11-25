@@ -11,7 +11,8 @@ int main(){
     }else if(n==2){
         cout<<2;
         return 0;
-    }else{
+    }
+    else{
         int f1=1, f2=2, f3=0, i=3;
         while(i<=n){
             f3 = 3*f2-2*f1;
