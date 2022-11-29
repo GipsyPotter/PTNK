@@ -1,66 +1,105 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <vector>
+#include <cmath>
+
 using namespace std;
 
+string delSpaces(string &str)
+{
+    str.erase(remove(str.begin(), str.end(), ' '), str.end());
+    return str;
+}
+
 int main(){
+    string time0 = " 2 days 36 hour 150minutes";
     string time;
-    cin>>time;
-    int day = 0, hour = 0, minute = 0, second = 0;
+    vector <int> day;
+    vector <int> hour;
+    vector <int> minute;
+    vector <int> second;
+    time = delSpaces(time0);
+    cout << time << endl;
+
+
+    int days = 0, hours = 0, minutes = 0, seconds = 0;
     bool day1 = false, hour1 = false, minute1 = false, second1 = false;
-    for (int i = 0; i < time.length(); i++){
-        if (time[i] == 'd') {
+
+
+    for (int i = 0; i < time.length(); i++) {
+        if (time[i] == 'd' || time[i] == 'D') {
             day1 = true;
-        }
-        else if (time[i] == 'h') {
+        } else if (time[i] == 'h'|| time[i] == 'H') {
             hour1 = true;
-        }
-        else if (time[i] == 'm') {
+        } else if (time[i] == 'm' || time[i] == 'M') {
             minute1 = true;
-        }
-        else if (time[i] == 's') {
+        } else if (time[i] == 's' || time[i] == 'S') {
             second1 = true;
         }
     }
-    if (day1 == true) {
-        for (int i = 0; i < time.length(); i++) {
-            if (time[i] == 'd') {
+    int count = 0;
+    if (day1) {
+        for (char i: time) {
+            count ++;
+            if (isdigit(i)) {
+                int day2 = i - '0';
+                day.push_back(day2);
+            }
+            else if (i == 'd' || i == 'D') {
                 break;
             }
-            else {
-                day = day * 10 + (time[i] - '0');
+
+        }
+    }
+    if (hour1) {
+        for (int i = count; i < time.length(); i++) {
+            count ++;
+            if (isdigit(time[i])) {
+                int hour2 = time[i] - '0';
+                hour.push_back(hour2);
+            }
+            else if (time[i] == 'h' || time[i] == 'H') {
+                break;
             }
         }
     }
-    if (hour1 == true) {
-        for (int i = 0; i < time.length(); i++) {
-            if (time[i] == 'h') {
-                break;
+    if (minute1) {
+        for (int i = count; i < time.length(); i++) {
+            count ++;
+            if (isdigit(time[i])) {
+                int minute2 = time[i] - '0';
+                minute.push_back(minute2);
             }
-            else {
-                hour = hour * 10 + (time[i] - '0');
+            else if (time[i] == 'm' || time[i] == 'M') {
+                break;
             }
         }
     }
-    if (minute1 == true) {
-        for (int i = 0; i < time.length(); i++) {
-            if (time[i] == 'm') {
-                break;
+    if (second1) {
+        for (int i = count; i < time.length(); i++) {
+            count ++;
+            if (isdigit(time[i])) {
+                int second2 = time[i] - '0';
+                second.push_back(second2);
             }
-            else {
-                minute = minute * 10 + (time[i] - '0');
+            else if (time[i] == 's' || time[i] == 'S') {
+                break;
             }
         }
     }
-    if (second1 == true) {
-        for (int i = 0; i < time.length(); i++) {
-            if (time[i] == 's') {
-                break;
-            }
-            else {
-                second = second * 10 + (time[i] - '0');
-            }
-        }
+    for (int i = 0; i < day.size(); i++) {
+        days += day[i] * pow(10, day.size() - i - 1);
     }
-    int total = day * 86400 + hour * 3600 + minute * 60 + second;
-    cout<<total<<endl;
+    for (int i = 0; i < hour.size(); i++) {
+        hours += hour[i] * pow(10, hour.size() - i - 1);
+    }
+    for (int i = 0; i < minute.size(); i++) {
+        minutes += minute[i] * pow(10, minute.size() - i - 1);
+    }
+    for (int i = 0; i < second.size(); i++) {
+        seconds += second[i] * pow(10, second.size() - i - 1);
+    }
+    int total = days * 86400 + hours * 3600 + minutes * 60 + seconds;
+    cout << total << endl;
 }
