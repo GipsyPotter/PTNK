@@ -100,6 +100,10 @@ int main(){
     for (int i = 0; i < second.size(); i++) {
         seconds += second[i] * pow(10, second.size() - i - 1);
     }
+    if (hours > 24 || minutes > 60 || seconds > 60) {
+        cout << "Error: Check time input" << endl;
+        return 0;
+    }
     int total = days * 86400 + hours * 3600 + minutes * 60 + seconds;
     cout << total << endl;
 }
