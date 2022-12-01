@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string   input   = "2 days 36 hour150minutes";
+    string   input   = "10d16 minutes5s";
 
     uint64_t sec     = 0;
     uint64_t temp    = 0;
