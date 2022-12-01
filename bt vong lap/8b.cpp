@@ -5,7 +5,6 @@ int main(){
     int count = 0;
     cin>>n;
     temp = n;
-    if(n == 0) count = 1;
     while(temp != 0)
     {
         if(temp % 10 != 0) count++;
