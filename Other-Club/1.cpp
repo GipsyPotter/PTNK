@@ -13,7 +13,7 @@ string delSpaces(string &str)
 }
 
 int main(){
-    string time0 = "1d";
+    string time0 = "3";
     string time;
     vector <int> day;
     vector <int> hour;
@@ -24,12 +24,15 @@ int main(){
 
 
     int days = 0, hours = 0, minutes = 0, seconds = 0;
-    bool day1 = false, hour1 = false, minute1 = false, second1 = false;
+    bool day1 = false, hour1 = false, minute1 = false, second1 = false, allNum = true;
 
 
     for (char i : time) {
         if (i == 'd' || i == 'D') {
             day1 = true;
+        if (isdigit(i)) {
+        allNum = false;
+        }
         } else if (i == 'h'|| i == 'H') {
             hour1 = true;
         } else if (i == 'm' || i == 'M') {
@@ -64,7 +67,7 @@ int main(){
             }
         }
     }
-    if (minute1) {
+    if (minute1||allNum) {
         for (int i = count; i < time.length(); i++) {
             count ++;
             if (isdigit(time[i])) {
