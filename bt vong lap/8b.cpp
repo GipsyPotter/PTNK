@@ -5,24 +5,10 @@ int main(){
     int count = 0;
     cin>>n;
     temp = n;
-    if(n == 0) count = 1;
     while(temp != 0)
     {
-        count++;
+        if(temp % 10 != 0) count++;
         temp = temp / 10;
     }
-
-    int array[count];
-    int number = n;
-    for (int i = 5; i >= 0; i--) {
-        array[i] = number % 10;
-        number /= 10;
-    }
-    int count2 = 0;
-    for (int i = 0; i < count; i++) {
-        if (array[i] != 0) {
-            count2++;
-        }
-    }
-    cout<<count2<<endl;
+    cout << count;
 }
