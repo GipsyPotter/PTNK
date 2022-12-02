@@ -13,7 +13,7 @@ string delSpaces(string &str)
 }
 
 int main(){
-    string time0 = "3days12hours4minutes5seconds";
+    string time0 = "1d";
     string time;
     vector <int> day;
     vector <int> hour;
