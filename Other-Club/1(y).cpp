@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-    string   input   = "10d16 minutes5s";
-
+    string   input   = "1m";
+    cout<<input<<endl;
     uint64_t sec     = 0;
     uint64_t temp    = 0;
 
