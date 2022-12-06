@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string   input   = "1m";
+    string   input   = "1d";
     cout<<input<<endl;
     uint64_t sec     = 0;
     uint64_t temp    = 0;
