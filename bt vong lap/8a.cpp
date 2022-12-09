@@ -3,7 +3,8 @@
 using namespace std;
 int main()
 {
-    uint64_t count = 0, temp, n;
+    long temp, n;
+    int count = 0;
     cin>>n;
     temp = n;
     if(n == 0) count = 1;
