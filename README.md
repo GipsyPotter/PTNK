@@ -2,9 +2,9 @@
 
 This is a directory of all the IT related things that we do at TN3.
 
-Update 25/11/22: Fixed some bugs. But lookout for mistakes , if you find any, please let us know!!
+Update 9/12/22: Bug on 8m and 8q, the rest in "vong lap" is correct.
 
-## Resources
+## Resourcesa
 
 Documents and class work [nangkhieutin](http://nangkhieutin.com/)
 
