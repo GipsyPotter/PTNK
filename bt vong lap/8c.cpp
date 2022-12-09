@@ -4,7 +4,6 @@ int main(){
     long temp, n;
     int sum = 0;
     cin>>n;
-    while(n <= 0);
     temp = n;
     while(temp != 0)
     {
