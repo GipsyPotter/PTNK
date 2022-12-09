@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    long temp, n;
-    int count = 0;
+    uint64_t temp, n, count = 0;
     cin>>n;
     temp = n;
     while(temp != 0)
