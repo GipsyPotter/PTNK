@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int n, num, digit, rev = 0, maxeven;
+    uint64_t n, num, digit, rev = 0, maxeven;
     bool even = false;
     cin >> num;
     n = num;

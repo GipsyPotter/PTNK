@@ -12,7 +12,7 @@ bool KTSNT(int x) {
 }
 
 int main() {
-    unsigned int n;
+    uint64_t n;
     cin >> n;
     if (KTSNT(n))
         cout <<"YES";
