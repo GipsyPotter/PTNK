@@ -1,29 +1,27 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
+
 int main()
 {
-    uint64_t n = 0;
-    cin>>n;
-    bool CheckTangDan = true;
-    uint64_t themang = n;
-    uint64_t ChuSoCuoi = themang % 10;
-    themang /= 10;
-    while(themang != 0)
+    uint64_t n, sum = 0;
+    cin >> n;
+    uint64_t oldDigit = n % 10;
+    n /= 10;
+    uint64_t max = 0;
+    while(n != 0)
     {
-        int ChuSoKeCuoi = themang % 10;
-        themang /= 10;
-        if (ChuSoCuoi < ChuSoKeCuoi)
+        uint64_t digit = n % 10;
+        if(oldDigit < digit)
         {
-            CheckTangDan = false;
-            break;
+            cout<<"NO";
+            return 0;
         }
-        else
-        {
-            ChuSoCuoi = ChuSoKeCuoi;
-        }
+        oldDigit = digit;
+        n /= 10;
     }
-    if(CheckTangDan)
-        cout<<"YES";
-    else
-        cout<<"NO";
+    cout << "YES";
 }
