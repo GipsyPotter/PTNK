@@ -5,21 +5,24 @@
 
 using namespace std;
 
-int main(){
-    int n, delta, digit, deltamax = 0;
+uint64_t notU(int64_t n){
+    if(n < 0) return -1*n;
+    return n;
+}
+int main()
+{
+    uint64_t n, sum = 0;
     cin >> n;
-    vector <int> nv;
-    while (n != 0){
-        digit = n % 10;
-        nv.push_back(digit);
-        n = n / 10;
+    uint64_t oldDigit = n % 10;
+    n /= 10;
+    uint64_t min = 20;
+    while(n != 0)
+    {
+        uint64_t digit = n % 10;
+        uint64_t delta = notU(digit - oldDigit);
+        if(delta < min) min = delta;
+        oldDigit = digit;
+        n /= 10;
     }
-    reverse(nv.begin(), nv.end());
-    for (int i = 0; i < nv.size() - 1; i++){
-        delta = abs(nv[i] - nv[i+1]);
-        if (delta > deltamax){
-            deltamax = delta;
-        }
-    }
-    cout << deltamax;
+    cout << min;
 }
