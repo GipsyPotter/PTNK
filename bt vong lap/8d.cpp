@@ -5,6 +5,10 @@
 
 using namespace std;
 
+uint64_t notU(uint64_t n){
+    if(n < 0) return -n;
+    return n;
+}
 int main()
 {
     uint64_t n, sum = 0;
@@ -14,7 +18,7 @@ int main()
     while(n != 0)
     {
         uint64_t digit = n % 10;
-        sum += abs(digit - oldDigit);
+        sum += notU(digit - oldDigit);
         oldDigit = digit;
         n /= 10;
     }
