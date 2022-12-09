@@ -10,3 +10,4 @@ int main(){
         temp = temp / 10;
     }
     cout << count;
+}
