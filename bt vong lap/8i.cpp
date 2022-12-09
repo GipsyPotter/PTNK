@@ -2,8 +2,8 @@
 
 using namespace std;
 int main(){
-    long temp, n, num, digit, rev = 0;
-    int count = 0;
+    uint64_t temp, n, num, digit, rev = 0;
+    uint64_t count = 0;
     cin>>n;
     num = n;
     while (num != 0) {
