@@ -5,8 +5,8 @@
 
 using namespace std;
 
-uint64_t notU(uint64_t n){
-    if(n < 0) return -n;
+uint64_t notU(int64_t n){
+    if(n < 0) return -1*n;
     return n;
 }
 int main()
