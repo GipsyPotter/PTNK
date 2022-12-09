@@ -5,19 +5,18 @@
 
 using namespace std;
 
-int main(){
-    int n, delta, digit, sum = 0;
+int main()
+{
+    int n, sum = 0;
     cin >> n;
-    vector <int> nv;
-    while (n != 0){
-        digit = n % 10;
-        nv.push_back(digit);
-        n = n / 10;
-    }
-    reverse(nv.begin(), nv.end());
-    for (int i = 0; i < nv.size() - 1; i++){
-        delta = abs(nv[i] - nv[i+1]);
-        sum += delta;
+    int oldDigit = n % 10;
+    n /= 10;
+    while(n != 0)
+    {
+        int digit = n % 10;
+        sum += abs(digit - oldDigit);
+        oldDigit = digit;
+        n /= 10;
     }
     cout << sum;
 }
