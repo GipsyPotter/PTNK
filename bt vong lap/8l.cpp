@@ -2,11 +2,11 @@
 using namespace std;
 int main()
 {
-    int n = 0;
+    uint64_t n = 0;
     cin>>n;
     bool CheckTangDan = true;
-    int themang = n;
-    int ChuSoCuoi = themang % 10;
+    uint64_t themang = n;
+    uint64_t ChuSoCuoi = themang % 10;
     themang /= 10;
     while(themang != 0)
     {
