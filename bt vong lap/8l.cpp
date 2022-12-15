@@ -5,9 +5,13 @@ int main()
 {
     uint64_t n, sum = 0;
     cin >> n;
-    uint64_t oldDigit = n % 10;
+    if(n < 10)
+    {
+        cout<<"YES";
+        return 0;
+    }
+    uint64_t oldDigit = n % 10, max = 0;
     n /= 10;
-    uint64_t max = 0;
     while(n != 0)
     {
         uint64_t digit = n % 10;
