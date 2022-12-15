@@ -1,23 +1,15 @@
 #include <iostream>
 using namespace std;
-int main() {
-    uint64_t n, num, digit, rev = 0, maxeven;
-    bool even = false;
-    cin >> num;
-    n = num;
-    while (num != 0) {
-        digit = num % 10;
-        if(digit % 2 == 0) {
-            if(digit > maxeven) {
-                maxeven = digit;
-                even = true;
-            }
-        }
-        num = num / 10;
+
+int main(){
+    int64_t temp, n, max = -1;
+    cin>>n;
+    temp = n;
+    while(temp != 0)
+    {
+        int tmp = temp % 10;
+        if(tmp%2==0) max = (max<tmp) ? tmp : max;
+        temp = temp / 10;
     }
-    if(even) {
-        cout << maxeven;
-    } else {
-        cout << -1;
-    }
+    cout<<max;
 }
