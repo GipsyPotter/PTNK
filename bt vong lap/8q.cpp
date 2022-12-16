@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool KTSNT(int x) {
+bool KTSNT(uint64_t x) {
     if (x < 2)
         return false;
     for (int i = 2; i <= sqrt(x); i++)
