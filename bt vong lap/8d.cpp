@@ -1,8 +1,4 @@
 #include <iostream>
-#include <cmath>
-#include <vector>
-#include <algorithm>
-
 using namespace std;
 
 uint64_t notU(int64_t n){
