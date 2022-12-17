@@ -2,7 +2,7 @@
 
 This is a directory of all the IT related things that we do at TN3.
 
-Update 9/12/22: Bug on 8m and 8q, the rest in "vong lap" is correct.
+Update 17/12/22: All fixed and updated
 
 ## Resourcesa
 
