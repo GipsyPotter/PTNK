@@ -10,7 +10,7 @@ int main() {
     int c = 0, maxx = 0;
     for (int i = 0; i < str.length(); i++) {
 //        cout << c << endl;
-        if (str[i] != '0') c++;
+        if (str[i] != '0') c++; 
         else {
             c = 0;
         }
